@@ -6,11 +6,11 @@ on:
 
 
 jobs:
-  build:
+  Test Execution:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10', '3.11']
+        python-version: ['3.13.9']
 
     steps:
     - uses: actions/checkout@v4
@@ -25,12 +25,12 @@ jobs:
         python -m pip install --upgrade pip
       
 
-    - name: Run tests
+    - name: Test Execution
       run: |
        for file in src/python/*.py; do python "$file"; done
 
 
-    - name: Upload coverage reports
+    - name: Upload Coverage Reports
       uses: codecov/codecov-action@v3
       with:
         file: ./coverage.xml
