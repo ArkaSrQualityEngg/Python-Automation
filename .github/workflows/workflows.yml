@@ -6,11 +6,11 @@ on:
 
 
 jobs:
-  build:
+  python-automation-tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.13.9']
+        python-version: ['3.9', '3.10', '3.11', '3.13.9', '3.14.0']
 
     steps:
     - uses: actions/checkout@v4
