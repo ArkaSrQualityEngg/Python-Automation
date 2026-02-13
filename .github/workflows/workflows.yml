@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  Test Execution:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
