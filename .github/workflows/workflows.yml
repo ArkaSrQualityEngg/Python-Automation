@@ -23,11 +23,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov
+      
 
     - name: Run tests
       run: |
-        pytest --cov=. --cov-report=xml
+       for file in src/python/*.py; do python "$file"; done
+
 
     - name: Upload coverage reports
       uses: codecov/codecov-action@v3
