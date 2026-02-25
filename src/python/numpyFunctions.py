@@ -29,6 +29,7 @@ print(arr_3D.ravel())
 print(arr_4D.flatten())
 
 #6. transpose() - converts rows into columns, basically transpose operation in matrices
-print(arr_2D.transpose())
+# print(arr_2D.transpose())
+print(arr_2D.T)
 
 
